@@ -1,0 +1,257 @@
+/* Global Styles for Coriander Leaf - Obsidian Premium */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --primary: #22C55E;
+    --primary-dark: #16a34a;
+    --primary-muted: rgba(34, 197, 94, 0.2);
+    --obsidian-bg: #000000;
+    --surface-dark: #080808;
+    --surface-light: #121212;
+    --glass-bg: rgba(8, 8, 8, 0.8);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --transition-standard: cubic-bezier(0.4, 0, 0.2, 1);
+    --font-heading: 'Outfit', sans-serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+* {
+    -webkit-tap-highlight-color: transparent;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--obsidian-bg);
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* Master App Container - Responsive for Mobile & PC */
+.app-container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: var(--obsidian-bg);
+}
+
+@media (min-width: 768px) {
+    .app-container {
+        max-width: 450px;
+        box-shadow: 0 0 100px rgba(0, 0, 0, 0.5);
+        border-right: 1px solid var(--glass-border);
+        border-left: 1px solid var(--glass-border);
+    }
+
+    body {
+        background-color: #000;
+        /* Darker background outside the container on PC */
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/* Premium Glassmorphism */
+.premium-glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+}
+
+/* Premium Navigation & Headers */
+.glass-nav {
+    background: rgba(5, 5, 5, 0.85);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border-bottom: 1px solid var(--glass-border);
+    padding-top: 0.75rem !important;
+    padding-bottom: 0.75rem !important;
+}
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: inherit;
+    /* Matches app-container width on PC */
+    background: rgba(5, 5, 5, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-top: 1px solid var(--glass-border);
+    z-index: 50;
+    padding: 8px 20px 24px 20px;
+}
+
+/* Typography Scaling for Mobile */
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+h1 {
+    font-size: 1.5rem !important;
+}
+
+h2 {
+    font-size: 1.25rem !important;
+}
+
+h3 {
+    font-size: 1.125rem !important;
+}
+
+/* Hero Heading specific scaling */
+.text-3xl {
+    font-size: 2rem !important;
+    font-weight: 900 !important;
+    line-height: 1.1 !important;
+}
+
+/* Consistent UI Components */
+.obsidian-card {
+    background: linear-gradient(165deg, var(--surface-light), var(--surface-dark));
+    border: 1px solid var(--glass-border);
+    border-radius: 1.5rem;
+    padding: 1.25rem;
+    transition: all 0.3s var(--transition-standard);
+}
+
+.obsidian-card:active {
+    background: linear-gradient(165deg, var(--surface-dark), var(--surface-light));
+}
+
+/* Interactive Elements */
+.tap-effect:active {
+    transform: scale(0.97);
+    filter: brightness(0.9);
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: #000 !important;
+    font-weight: 800;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
+    transition: all 0.3s var(--transition-standard);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(34, 197, 94, 0.2);
+}
+
+.btn-primary:active {
+    box-shadow: 0 2px 8px rgba(34, 197, 94, 0.1);
+}
+
+.btn-muted {
+    background-color: var(--primary-muted);
+    color: var(--primary) !important;
+    font-weight: 700;
+    font-size: 0.875rem;
+    border: 1px solid rgba(34, 197, 94, 0.2);
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
+    transition: all 0.3s var(--transition-standard);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-muted:active {
+    background-color: rgba(34, 197, 94, 0.3);
+}
+
+/* Premium Inputs */
+.premium-input {
+    background: var(--surface-dark);
+    border: 1px solid var(--glass-border);
+    border-radius: 1rem;
+    padding: 1rem 1.25rem;
+    color: white;
+    font-family: var(--font-body);
+    width: 100%;
+    transition: all 0.3s var(--transition-standard);
+}
+
+.premium-input:focus {
+    outline: none;
+    border-color: var(--primary);
+    background: var(--surface-light);
+    box-shadow: 0 0 10px rgba(34, 197, 94, 0.1);
+}
+
+/* Animations */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-slide-up {
+    animation: slideUp 0.6s var(--transition-standard) forwards;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--obsidian-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+}
+
+/* Typography Helpers */
+.font-accent {
+    font-family: 'Playfair Display', serif;
+}
+
+.text-zinc-dim {
+    color: #888;
+}
+
+.text-zinc-bright {
+    color: #ccc;
+}
+
+/* Custom Scrollbar Hiding */
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}

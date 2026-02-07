@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Order History - Coriander Leaf</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/app.js"></script>
+    <style type="text/tailwindcss">
+        .material-symbols-rounded {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+
+<body class="bg-black text-white antialiased">
+    <div class="app-container">
+        <!-- Global Header -->
+        <header class="sticky top-0 z-[60] glass-nav px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-4">
+                    <button onclick="navigate('index.html')"
+                        class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-black tap-effect">
+                        <span class="material-symbols-rounded">arrow_back</span>
+                    </button>
+                    <h1 class="text-lg font-bold">Track Orders</h1>
+                </div>
+                <button
+                    class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-black tap-effect">
+                    <span class="material-symbols-rounded text-xl">help_outline</span>
+                </button>
+            </div>
+        </header>
+
+        <main class="flex-1 pb-32 pt-6 px-6 space-y-8 animate-fade-in">
+            <!-- Premium Banner -->
+            <section class="animate-slide-up">
+                <div class="relative w-full h-[200px] obsidian-card overflow-hidden group">
+                    <img alt="Premium Delivery"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-60"
+                        src="images/hero-main.png" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>
+                    <div class="absolute bottom-6 left-6 right-6">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                            <span class="text-[10px] font-bold tracking-widest uppercase text-primary">Live
+                                Tracking</span>
+                        </div>
+                        <h2 class="text-2xl font-accent italic mb-1">On Its Way</h2>
+                        <p class="text-zinc-400 text-[10px] font-bold tracking-widest uppercase">Freshness Guaranteed
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Active Order Detailed -->
+            <section class="animate-slide-up" style="animation-delay: 0.1s">
+                <h2 class="text-sm font-bold text-zinc-400 uppercase tracking-widest mb-4 px-2">Current Status</h2>
+                <div class="obsidian-card p-6 border-primary/10">
+                    <div class="flex justify-between items-start mb-8">
+                        <div>
+                            <h3 class="font-bold text-lg mb-1">Order #RES-9421</h3>
+                            <p class="text-xs text-zinc-400">2 Items · Arriving in 12-15 mins</p>
+                        </div>
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center text-primary shadow-inner shadow-primary/5">
+                            <span class="material-symbols-rounded text-3xl animate-bounce">delivery_dining</span>
+                        </div>
+                    </div>
+
+                    <!-- Enhanced Step Tracker -->
+                    <div class="relative flex justify-between mb-8 px-2">
+                        <div class="absolute top-4 left-0 w-full h-0.5 bg-white/5 -z-10"></div>
+                        <div class="absolute top-4 left-0 w-[66%] h-0.5 bg-primary -z-10"></div>
+
+                        <div class="flex flex-col items-center gap-2">
+                            <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-black">
+                                <span class="material-symbols-rounded text-sm">check</span>
+                            </div>
+                            <span class="text-[8px] font-bold uppercase tracking-tighter text-zinc-400">Placed</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2">
+                            <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-black">
+                                <span class="material-symbols-rounded text-sm">check</span>
+                            </div>
+                            <span class="text-[8px] font-bold uppercase tracking-tighter text-zinc-400">Cooking</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2">
+                            <div
+                                class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-black shadow-lg shadow-primary/30 ring-4 ring-primary/10">
+                                <span class="material-symbols-rounded text-sm">local_shipping</span>
+                            </div>
+                            <span class="text-[8px] font-bold uppercase tracking-tighter text-primary">On Way</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2">
+                            <div
+                                class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-zinc-300">
+                                <span class="material-symbols-rounded text-sm">home</span>
+                            </div>
+                            <span class="text-[8px] font-bold uppercase tracking-tighter text-zinc-300">Arrived</span>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4 p-4 bg-white/[0.03] rounded-2xl mb-6 border border-white/5">
+                        <div class="w-12 h-12 rounded-xl overflow-hidden bg-zinc-900">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop"
+                                class="w-full h-full object-cover grayscale opacity-70">
+                        </div>
+                        <div class="flex-1">
+                            <p class="text-xs font-bold">Rohan Sharma</p>
+                            <p class="text-[10px] text-zinc-400 uppercase tracking-widest font-medium">Your Delivery
+                                Hero</p>
+                        </div>
+                        <button
+                            class="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center tap-effect">
+                            <span class="material-symbols-rounded text-lg">call</span>
+                        </button>
+                    </div>
+
+                    <button onclick="fakeAction('Track Live Location')"
+                        class="w-full py-4 btn-primary rounded-2xl text-[11px] font-black uppercase tracking-widest tap-effect shadow-xl shadow-primary/20">VIEW
+                        LIVE MAP</button>
+                </div>
+            </section>
+
+            <!-- Recent History -->
+            <section class="animate-slide-up" style="animation-delay: 0.2s">
+                <div class="flex items-center justify-between mb-4 px-2">
+                    <h2 class="text-sm font-bold text-zinc-400 uppercase tracking-widest">Recent History</h2>
+                    <button class="text-primary text-[10px] font-bold">CLEAR ALL</button>
+                </div>
+                <div class="space-y-4">
+                    <div class="obsidian-card p-5 group tap-effect">
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="flex gap-4">
+                                <div
+                                    class="w-14 h-14 rounded-2xl overflow-hidden bg-zinc-900 border border-white/5 group-hover:scale-105 transition-transform">
+                                    <img src="https://images.unsplash.com/photo-1589187151032-573a91317445?w=200&h=200&fit=crop"
+                                        class="w-full h-full object-cover">
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-sm">Order #RES-8812</h3>
+                                    <p class="text-[10px] text-zinc-400">Yesterday, 08:32 PM</p>
+                                    <p class="text-[9px] text-primary font-bold mt-1">Delivered Successfully</p>
+                                </div>
+                            </div>
+                            <div class="text-base font-accent italic text-primary">₹420</div>
+                        </div>
+                        <div class="flex gap-3">
+                            <button onclick="fakeAction('Download Receipt')"
+                                class="flex-1 py-3 bg-primary rounded-xl text-[9px] font-bold uppercase tracking-widest text-black tap-effect">Receipt</button>
+                            <button onclick="fakeAction('Reorder Favorites')"
+                                class="flex-1 py-3 bg-primary text-black rounded-xl text-[9px] font-black uppercase tracking-widest tap-effect">Reorder</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Global Bottom Nav -->
+        <nav class="bottom-nav flex justify-between items-center px-4">
+            <button onclick="navigate('index.html')"
+                class="w-12 h-12 rounded-2xl btn-muted flex items-center justify-center tap-effect">
+                <span class="material-symbols-rounded">home</span>
+            </button>
+            <button onclick="navigate('menu.html')"
+                class="w-12 h-12 rounded-2xl btn-muted flex items-center justify-center tap-effect">
+                <span class="material-symbols-rounded">restaurant_menu</span>
+            </button>
+            <div class="relative -mt-8">
+                <button onclick="navigate('checkout.html')"
+                    class="w-16 h-16 bg-primary rounded-full flex items-center justify-center shadow-lg shadow-primary/40 text-black tap-effect border-[6px] border-[#080808]">
+                    <span class="material-symbols-rounded text-3xl font-bold">shopping_basket</span>
+                </button>
+            </div>
+            <button onclick="navigate('offers.html')"
+                class="w-12 h-12 rounded-2xl btn-muted flex items-center justify-center tap-effect">
+                <span class="material-symbols-rounded">local_offer</span>
+            </button>
+            <button class="w-12 h-12 rounded-2xl bg-primary text-black flex items-center justify-center tap-effect">
+                <span class="material-symbols-rounded">history</span>
+            </button>
+        </nav>
+    </div>
+</body>
+
+</html>

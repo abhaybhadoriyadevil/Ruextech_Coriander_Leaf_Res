@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Coriander Leaf - Home</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/app.js"></script>
+    <style type="text/tailwindcss">
+        .material-symbols-rounded {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="bg-black text-white antialiased">
+    <div class="app-container">
+        <!-- Global Header -->
+        <header class="sticky top-0 z-[60] glass-nav px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                    <span class="material-symbols-rounded text-primary">location_on</span>
+                    <span class="text-xs font-bold tracking-tight">Coriander Leaf, New Delhi</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <button
+                        class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-black tap-effect">
+                        <span class="material-symbols-rounded text-xl">notifications</span>
+                    </button>
+                    <button onclick="navigate('profile.html')"
+                        class="w-10 h-10 rounded-full bg-primary flex items-center justify-center tap-effect overflow-hidden">
+                        <img src="images/logo.png" class="w-full h-full object-cover">
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main class="flex-1 pb-32 pt-6 px-6 space-y-8 animate-fade-in">
+            <!-- Hero Promo -->
+            <section class="animate-slide-up">
+                <div class="relative w-full h-[240px] obsidian-card overflow-hidden group">
+                    <img alt="Premium Indian Cuisine"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                        src="images/hero-main.png" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent">
+                    </div>
+                    <div class="absolute bottom-6 left-6 right-6">
+                        <h2 class="text-3xl font-accent italic mb-1">Fresh & Pure</h2>
+                        <p class="text-primary text-sm font-bold tracking-widest uppercase mb-4">Flat
+                            20% Off Today</p>
+                        <button onclick="navigate('menu.html')"
+                            class="btn-primary px-6 py-2 rounded-full text-xs tap-effect">ORDER
+                            NOW</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quick Actions -->
+            <section class="grid grid-cols-2 gap-4 animate-slide-up" style="animation-delay: 0.1s">
+                <button onclick="navigate('menu.html')"
+                    class="bg-primary p-6 rounded-[2rem] flex flex-col items-center gap-3 tap-effect text-black shadow-lg shadow-primary/20">
+                    <div class="w-12 h-12 rounded-2xl bg-black/10 flex items-center justify-center">
+                        <span class="material-symbols-rounded">restaurant_menu</span>
+                    </div>
+                    <span class="text-xs font-bold uppercase tracking-wider">Order Online</span>
+                </button>
+                <button onclick="navigate('book.html')"
+                    class="bg-primary p-6 rounded-[2rem] flex flex-col items-center gap-3 tap-effect text-black shadow-lg shadow-primary/20">
+                    <div class="w-12 h-12 rounded-2xl bg-black/10 flex items-center justify-center">
+                        <span class="material-symbols-rounded">event_seat</span>
+                    </div>
+                    <span class="text-xs font-bold uppercase tracking-wider">Book a Table</span>
+                </button>
+            </section>
+
+            <!-- Trending Dishes -->
+            <section class="animate-slide-up" style="animation-delay: 0.2s">
+                <div class="flex items-center justify-between mb-4 px-2">
+                    <h3 class="text-lg font-bold">Trending Today</h3>
+                    <button onclick="navigate('menu.html')"
+                        class="bg-primary text-black px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest tap-effect">VIEW
+                        ALL</button>
+                </div>
+                <div class="flex overflow-x-auto gap-4 hide-scrollbar pb-4 ">
+                    <!-- Paneer Tikka -->
+                    <div class="min-w-[200px] obsidian-card p-4 group tap-effect cursor-pointer"
+                        onclick="navigate('menu.html')">
+                        <div class="w-full h-32 rounded-2xl overflow-hidden mb-3 relative">
+                            <img src="images/paneer-tikka.png"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-duration-500">
+                        </div>
+                        <h4 class="font-bold text-sm mb-1">Paneer Tikka Achari</h4>
+                        <div class="flex justify-between items-center">
+                            <span class="text-primary font-bold">₹320</span>
+                            <span
+                                class="bg-primary/20 px-2 py-0.5 rounded-full text-[10px] text-primary font-bold">BESTSELLER</span>
+                        </div>
+                    </div>
+                    <!-- Dal Makhani -->
+                    <div class="min-w-[200px] obsidian-card p-4 group tap-effect cursor-pointer"
+                        onclick="navigate('menu.html')">
+                        <div class="w-full h-32 rounded-2xl overflow-hidden mb-3 relative">
+                            <img src="images/main-course-premium.png"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-duration-500">
+                        </div>
+                        <h4 class="font-bold text-sm mb-1">Classic Dal Makhani</h4>
+                        <div class="flex justify-between items-center">
+                            <span class="text-primary font-bold">₹280</span>
+                            <span
+                                class="bg-primary/20 px-2 py-0.5 rounded-full text-[10px] text-primary font-bold">FAVORITE</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Global Bottom Nav -->
+        <nav class="bottom-nav flex justify-between items-center px-4">
+            <button class="w-12 h-12 rounded-2xl bg-primary text-black flex items-center justify-center tap-effect">
+                <span class="material-symbols-rounded">home</span>
+            </button>
+            <button onclick="navigate('menu.html')"
+                class="w-12 h-12 rounded-2xl btn-muted flex items-center justify-center tap-effect">
+                <span class="material-symbols-rounded">restaurant_menu</span>
+            </button>
+            <div class="relative -mt-8">
+                <button onclick="navigate('checkout.html')"
+                    class="w-16 h-16 bg-primary rounded-full flex items-center justify-center shadow-lg shadow-primary/40 text-black tap-effect border-[6px] border-[#080808]">
+                    <span class="material-symbols-rounded text-3xl font-bold">shopping_basket</span>
+                </button>
+            </div>
+            <button onclick="navigate('offers.html')"
+                class="w-12 h-12 rounded-2xl btn-muted flex items-center justify-center tap-effect">
+                <span class="material-symbols-rounded">local_offer</span>
+            </button>
+            <button onclick="navigate('orders.html')"
+                class="w-12 h-12 rounded-2xl btn-muted flex items-center justify-center tap-effect">
+                <span class="material-symbols-rounded">history</span>
+            </button>
+        </nav>
+    </div>
+</body>
+
+</html>

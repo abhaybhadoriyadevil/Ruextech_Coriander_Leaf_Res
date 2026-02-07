@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Book a Table - Coriander Leaf</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/app.js"></script>
+    <style type="text/tailwindcss">
+        .material-symbols-rounded {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="bg-black text-white antialiased">
+    <div class="app-container">
+        <!-- Global Header -->
+        <header class="sticky top-0 z-[60] glass-nav px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-4">
+                    <button onclick="navigate('index.html')"
+                        class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-black tap-effect">
+                        <span class="material-symbols-rounded">arrow_back</span>
+                    </button>
+                    <h1 class="text-lg font-bold">Book a Table</h1>
+                </div>
+                <button
+                    class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-black tap-effect">
+                    <span class="material-symbols-rounded text-xl">info</span>
+                </button>
+            </div>
+        </header>
+
+        <main class="flex-1 pb-32 pt-6 px-6 space-y-8 animate-fade-in">
+            <!-- Date Selection -->
+            <section class="animate-slide-up">
+                <h2 class="text-sm font-bold text-zinc-500 uppercase tracking-widest mb-4 px-2">Select Date</h2>
+                <div class="flex gap-4 overflow-x-auto pb-4 hide-scrollbar">
+                    <div
+                        class="min-w-[70px] obsidian-card p-4 flex flex-col items-center border-primary/40 bg-primary/5">
+                        <span class="text-[10px] uppercase font-bold text-primary mb-1">Sat</span>
+                        <span class="text-2xl font-black text-primary">07</span>
+                    </div>
+                    <div class="min-w-[70px] obsidian-card p-4 flex flex-col items-center tap-effect">
+                        <span class="text-[10px] uppercase font-bold text-zinc-500 mb-1">Sun</span>
+                        <span class="text-2xl font-black text-zinc-300">08</span>
+                    </div>
+                    <div class="min-w-[70px] obsidian-card p-4 flex flex-col items-center tap-effect">
+                        <span class="text-[10px] uppercase font-bold text-zinc-500 mb-1">Mon</span>
+                        <span class="text-2xl font-black text-zinc-300">09</span>
+                    </div>
+                    <div class="min-w-[70px] obsidian-card p-4 flex flex-col items-center tap-effect">
+                        <span class="text-[10px] uppercase font-bold text-zinc-500 mb-1">Tue</span>
+                        <span class="text-2xl font-black text-zinc-300">10</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Time Slots -->
+            <section class="animate-slide-up" style="animation-delay: 0.1s">
+                <h2 class="text-sm font-bold text-zinc-500 uppercase tracking-widest mb-4 px-2">Select Time</h2>
+
+                <div class="space-y-6">
+                    <div>
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="material-symbols-rounded text-sm text-primary">light_mode</span>
+                            <p class="text-[10px] font-bold text-zinc-500 uppercase tracking-widest">Lunch</p>
+                        </div>
+                        <div class="grid grid-cols-3 gap-3">
+                            <button
+                                class="obsidian-card py-3 text-sm font-bold tap-effect cursor-not-allowed opacity-30">12:30</button>
+                            <button class="obsidian-card py-3 text-sm font-bold tap-effect shadow-inner">01:00</button>
+                            <button class="obsidian-card py-3 text-sm font-bold tap-effect">01:30</button>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="material-symbols-rounded text-sm text-primary">dark_mode</span>
+                            <p class="text-[10px] font-bold text-zinc-500 uppercase tracking-widest">Dinner</p>
+                        </div>
+                        <div class="grid grid-cols-3 gap-3">
+                            <button
+                                class="obsidian-card py-3 text-sm font-bold border-primary bg-primary text-black">07:30</button>
+                            <button class="obsidian-card py-3 text-sm font-bold tap-effect">08:00</button>
+                            <button class="obsidian-card py-3 text-sm font-bold tap-effect">08:30</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Guests -->
+            <section class="animate-slide-up" style="animation-delay: 0.2s">
+                <h2 class="text-sm font-bold text-zinc-400 uppercase tracking-widest mb-4 px-2">Guests</h2>
+                <div class="obsidian-card p-5 flex items-center justify-between">
+                    <button class="w-10 h-10 rounded-xl btn-primary tap-effect">
+                        <span class="material-symbols-rounded">remove</span>
+                    </button>
+                    <div class="flex flex-col items-center">
+                        <span class="text-3xl font-black">04</span>
+                        <span class="text-[9px] font-bold text-zinc-400 uppercase tracking-tighter">People</span>
+                    </div>
+                    <button class="w-10 h-10 rounded-xl btn-primary tap-effect">
+                        <span class="material-symbols-rounded">add</span>
+                    </button>
+                </div>
+            </section>
+
+            <button onclick="fakeAction('Confirming Booking...')"
+                class="w-full h-16 bg-primary text-black rounded-2xl font-black text-[12px] uppercase tracking-[0.2em] tap-effect flex items-center justify-center gap-4 shadow-lg shadow-primary/20">
+                Confirm Reservation
+                <span class="material-symbols-rounded font-bold">arrow_forward</span>
+            </button>
+        </main>
+
+        <!-- Global Bottom Nav -->
+        <nav class="bottom-nav flex justify-between items-center px-4">
+            <button onclick="navigate('index.html')"
+                class="w-12 h-12 rounded-2xl btn-muted flex items-center justify-center tap-effect">
+                <span class="material-symbols-rounded">home</span>
+            </button>
+            <button onclick="navigate('menu.html')"
+                class="w-12 h-12 rounded-2xl btn-muted flex items-center justify-center tap-effect">
+                <span class="material-symbols-rounded">restaurant_menu</span>
+            </button>
+            <div class="relative -mt-8">
+                <button onclick="navigate('checkout.html')"
+                    class="w-16 h-16 bg-primary rounded-full flex items-center justify-center shadow-lg shadow-primary/40 text-black tap-effect border-[6px] border-[#080808]">
+                    <span class="material-symbols-rounded text-3xl font-bold">shopping_basket</span>
+                </button>
+            </div>
+            <button onclick="navigate('offers.html')"
+                class="w-12 h-12 rounded-2xl btn-muted flex items-center justify-center tap-effect">
+                <span class="material-symbols-rounded">local_offer</span>
+            </button>
+            <button onclick="navigate('orders.html')"
+                class="w-12 h-12 rounded-2xl btn-muted flex items-center justify-center tap-effect">
+                <span class="material-symbols-rounded">history</span>
+            </button>
+        </nav>
+    </div>
+</body>
