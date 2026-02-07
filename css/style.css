@@ -2,14 +2,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
-    --primary: #22C55E;
-    --primary-dark: #16a34a;
-    --primary-muted: rgba(34, 197, 94, 0.2);
+    --primary: #10B981;
+    /* Premium Emerald/Green */
+    --primary-dark: #059669;
+    --primary-muted: rgba(16, 185, 129, 0.15);
     --obsidian-bg: #000000;
     --surface-dark: #080808;
     --surface-light: #121212;
-    --glass-bg: rgba(8, 8, 8, 0.8);
-    --glass-border: rgba(255, 255, 255, 0.08);
+    --glass-bg: rgba(0, 0, 0, 0.85);
+    --glass-border: rgba(255, 255, 255, 0.05);
     --transition-standard: cubic-bezier(0.4, 0, 0.2, 1);
     --font-heading: 'Outfit', sans-serif;
     --font-body: 'Inter', sans-serif;
@@ -46,7 +47,7 @@ body {
 @media (min-width: 768px) {
     .app-container {
         max-width: 450px;
-        box-shadow: 0 0 100px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 0 100px rgba(0, 0, 0, 0.8);
         border-right: 1px solid var(--glass-border);
         border-left: 1px solid var(--glass-border);
     }
@@ -62,16 +63,16 @@ body {
 /* Premium Glassmorphism */
 .premium-glass {
     background: var(--glass-bg);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
     border: 1px solid var(--glass-border);
 }
 
 /* Premium Navigation & Headers */
 .glass-nav {
-    background: rgba(5, 5, 5, 0.85);
-    backdrop-filter: blur(25px);
-    -webkit-backdrop-filter: blur(25px);
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
     border-bottom: 1px solid var(--glass-border);
     padding-top: 0.75rem !important;
     padding-bottom: 0.75rem !important;
@@ -85,9 +86,9 @@ body {
     width: 100%;
     max-width: inherit;
     /* Matches app-container width on PC */
-    background: rgba(5, 5, 5, 0.95);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
     border-top: 1px solid var(--glass-border);
     z-index: 50;
     padding: 8px 20px 24px 20px;
@@ -101,6 +102,7 @@ h4 {
     font-family: var(--font-heading);
     font-weight: 800;
     letter-spacing: -0.02em;
+    color: #ffffff;
 }
 
 h1 {
@@ -124,7 +126,7 @@ h3 {
 
 /* Consistent UI Components */
 .obsidian-card {
-    background: linear-gradient(165deg, var(--surface-light), var(--surface-dark));
+    background: linear-gradient(165deg, #0a0a0a, #020202);
     border: 1px solid var(--glass-border);
     border-radius: 1.5rem;
     padding: 1.25rem;
@@ -132,7 +134,7 @@ h3 {
 }
 
 .obsidian-card:active {
-    background: linear-gradient(165deg, var(--surface-dark), var(--surface-light));
+    background: linear-gradient(165deg, #050505, #000000);
 }
 
 /* Interactive Elements */
@@ -154,11 +156,12 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 15px rgba(34, 197, 94, 0.2);
+    box-shadow: 0 4px 20px rgba(16, 185, 129, 0.25);
+    border: none;
 }
 
 .btn-primary:active {
-    box-shadow: 0 2px 8px rgba(34, 197, 94, 0.1);
+    box-shadow: 0 2px 8px rgba(16, 185, 129, 0.15);
 }
 
 .btn-muted {
@@ -166,7 +169,7 @@ h3 {
     color: var(--primary) !important;
     font-weight: 700;
     font-size: 0.875rem;
-    border: 1px solid rgba(34, 197, 94, 0.2);
+    border: 1px solid rgba(16, 185, 129, 0.2);
     padding: 1rem 1.5rem;
     border-radius: 1rem;
     transition: all 0.3s var(--transition-standard);
@@ -176,7 +179,7 @@ h3 {
 }
 
 .btn-muted:active {
-    background-color: rgba(34, 197, 94, 0.3);
+    background-color: rgba(16, 185, 129, 0.25);
 }
 
 /* Premium Inputs */
