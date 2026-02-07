@@ -98,10 +98,10 @@ body {
 
 /* Premium Navigation & Headers */
 .glass-nav {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(30px);
     -webkit-backdrop-filter: blur(30px);
-    border-bottom: 1px solid var(--glass-border);
+    border-bottom: 1px solid var(--border-light);
     padding-top: 0.75rem !important;
     padding-bottom: 0.75rem !important;
 }
@@ -114,10 +114,10 @@ body {
     width: 100%;
     max-width: inherit;
     /* Matches app-container width on PC */
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(255, 255, 255, 0.98);
     backdrop-filter: blur(25px);
     -webkit-backdrop-filter: blur(25px);
-    border-top: 1px solid var(--glass-border);
+    border-top: 1px solid var(--border-light);
     z-index: 50;
     padding: 8px 20px 24px 20px;
 }
@@ -312,11 +312,14 @@ h3 {
     color: var(--obsidian-bg);
 }
 
-/* Dark sections keep white text */
+/* Navigation elements have dark text on white bg */
 .glass-nav,
+.glass-nav h1,
+.glass-nav h2,
+.glass-nav span:not(.material-symbols-rounded),
 .bottom-nav,
-.app-container>header {
-    color: var(--text-primary);
+.bottom-nav span:not(.material-symbols-rounded) {
+    color: var(--obsidian-bg);
 }
 
 /* Custom Scrollbar Hiding */
