@@ -52,8 +52,9 @@
 
 body {
     font-family: var(--font-body);
-    background-color: var(--obsidian-bg);
-    color: #ffffff;
+    background-color: #FFFFFF;
+    /* White main background */
+    color: var(--obsidian-bg);
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -69,7 +70,8 @@ body {
     display: flex;
     flex-direction: column;
     position: relative;
-    background-color: var(--obsidian-bg);
+    background-color: #FFFFFF;
+    /* White for content space */
 }
 
 @media (min-width: 768px) {
@@ -98,12 +100,19 @@ body {
 
 /* Premium Navigation & Headers */
 .glass-nav {
-    background: rgba(0, 0, 0, 0.8);
+    background: #0F0F0F;
+    /* Dark header background */
     backdrop-filter: blur(30px);
     -webkit-backdrop-filter: blur(30px);
     border-bottom: 1px solid var(--glass-border);
     padding-top: 0.75rem !important;
     padding-bottom: 0.75rem !important;
+}
+
+.glass-nav,
+.glass-nav * {
+    color: #FFFFFF;
+    /* White menu text */
 }
 
 .bottom-nav {
@@ -114,12 +123,19 @@ body {
     width: 100%;
     max-width: inherit;
     /* Matches app-container width on PC */
-    background: rgba(0, 0, 0, 0.9);
+    background: #0F0F0F;
+    /* Dark footer background */
     backdrop-filter: blur(25px);
     -webkit-backdrop-filter: blur(25px);
     border-top: 1px solid var(--glass-border);
     z-index: 50;
     padding: 8px 20px 24px 20px;
+}
+
+.bottom-nav,
+.bottom-nav * {
+    color: #FFFFFF;
+    /* White text in footer */
 }
 
 /* Typography Scaling for Mobile */
@@ -287,8 +303,8 @@ h3 {
 }
 
 .text-zinc-dim {
-    color: var(--text-secondary);
-    /* #A1A1A1 */
+    color: #666666;
+    /* Description text on cards */
 }
 
 .text-zinc-bright {
@@ -296,20 +312,22 @@ h3 {
     /* #FFFFFF */
 }
 
-/* Global text defaults - Cards have dark text on white bg */
+/* Card text colors - dark text on white cards */
 .obsidian-card h1,
 .obsidian-card h2,
 .obsidian-card h3,
 .obsidian-card h4,
 .obsidian-card h5,
 .obsidian-card h6 {
-    color: var(--obsidian-bg) !important;
+    color: #0F0F0F !important;
+    /* Dish names */
 }
 
 .obsidian-card p,
-.obsidian-card span:not(.material-symbols-rounded),
+.obsidian-card span:not(.material-symbols-rounded):not(.text-primary),
 .obsidian-card div {
-    color: var(--obsidian-bg);
+    color: #666666;
+    /* Descriptions */
 }
 
 /* Dark sections keep white text */
