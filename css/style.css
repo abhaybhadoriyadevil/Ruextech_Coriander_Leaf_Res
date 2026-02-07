@@ -2,38 +2,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
-    /* Core Brand Colors */
+    /* Core Brand Colors - Dark Green Theme */
     --primary: #1DB954;
-    /* Primary Green - CTAs, active states */
+    /* Bright Green - CTAs, active states */
     --primary-dark: #168F43;
     /* Dark Green - hover states */
     --primary-light: #E8F7EF;
-    /* Light Green - accent backgrounds */
+    /* Light Green - subtle accents */
     --primary-muted: rgba(29, 185, 84, 0.15);
 
-    /* Base Colors */
-    --obsidian-bg: #0F0F0F;
-    /* Primary Black - easier on eyes than pure black */
-    --surface-dark: #0F0F0F;
-    --surface-light: #FFFFFF;
-    /* White for cards and content */
-    --card-bg: #FFFFFF;
+    /* Base Colors - Dark Theme */
+    --obsidian-bg: #0D3B2E;
+    /* Dark green main background */
+    --surface-dark: #0D3B2E;
+    --surface-light: #1A4D3C;
+    /* Lighter green for cards */
+    --card-bg: #1A4D3C;
 
     /* Text Colors */
     --text-primary: #FFFFFF;
-    --text-secondary: #A1A1A1;
-    /* Dark Gray for descriptions */
+    --text-secondary: #A8B5A8;
+    /* Light green-gray for secondary text */
     --text-on-primary: #FFFFFF;
     /* White text on green buttons */
 
     /* Borders & Dividers */
-    --border-dark: #2A2A2A;
-    /* Medium Gray for borders on dark bg */
-    --border-light: #E8F7EF;
-    /* Light green for borders on white */
+    --border-dark: rgba(255, 255, 255, 0.1);
+    /* Subtle borders on dark */
+    --border-light: rgba(29, 185, 84, 0.2);
+    /* Green tinted borders */
 
     /* Glass Effects */
-    --glass-bg: rgba(15, 15, 15, 0.9);
+    --glass-bg: rgba(13, 59, 46, 0.95);
     --glass-border: rgba(255, 255, 255, 0.1);
 
     /* Transitions */
@@ -52,9 +52,10 @@
 
 body {
     font-family: var(--font-body);
-    background-color: #FFFFFF;
-    /* White main background */
-    color: var(--obsidian-bg);
+    background-color: var(--obsidian-bg);
+    /* Dark green background */
+    color: var(--text-primary);
+    /* White text */
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -70,8 +71,8 @@ body {
     display: flex;
     flex-direction: column;
     position: relative;
-    background-color: #FFFFFF;
-    /* White for content space */
+    background-color: var(--obsidian-bg);
+    /* Dark green background */
 }
 
 @media (min-width: 768px) {
@@ -171,16 +172,17 @@ h3 {
 /* Consistent UI Components */
 .obsidian-card {
     background: var(--card-bg);
-    border: 1px solid var(--border-light);
+    /* Dark green card */
+    border: 1px solid var(--border-dark);
     border-radius: 1.5rem;
     padding: 1.25rem;
     transition: all 0.3s var(--transition-standard);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    box-shadow: var(--shadow-card);
 }
 
 .obsidian-card:active {
     transform: translateY(1px);
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
 }
 
 /* Interactive Elements */
@@ -303,8 +305,8 @@ h3 {
 }
 
 .text-zinc-dim {
-    color: #666666;
-    /* Description text on cards */
+    color: var(--text-secondary);
+    /* Light green-gray for descriptions */
 }
 
 .text-zinc-bright {
@@ -312,22 +314,22 @@ h3 {
     /* #FFFFFF */
 }
 
-/* Card text colors - dark text on white cards */
+/* Card text colors - white text on dark green cards */
 .obsidian-card h1,
 .obsidian-card h2,
 .obsidian-card h3,
 .obsidian-card h4,
 .obsidian-card h5,
 .obsidian-card h6 {
-    color: #0F0F0F !important;
-    /* Dish names */
+    color: var(--text-primary) !important;
+    /* White headings */
 }
 
 .obsidian-card p,
 .obsidian-card span:not(.material-symbols-rounded):not(.text-primary),
 .obsidian-card div {
-    color: #666666;
-    /* Descriptions */
+    color: var(--text-secondary);
+    /* Light green-gray descriptions */
 }
 
 /* Dark sections keep white text */
