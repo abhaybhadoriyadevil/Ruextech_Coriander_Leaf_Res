@@ -7,10 +7,10 @@
     --primary-dark: #059669;
     --primary-muted: rgba(16, 185, 129, 0.15);
     --obsidian-bg: #000000;
-    --surface-dark: #080808;
-    --surface-light: #121212;
+    --surface-dark: #0a0a0a;
+    --surface-light: #1a1a1a;
     --glass-bg: rgba(0, 0, 0, 0.85);
-    --glass-border: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.08);
     --transition-standard: cubic-bezier(0.4, 0, 0.2, 1);
     --font-heading: 'Outfit', sans-serif;
     --font-body: 'Inter', sans-serif;
@@ -126,15 +126,15 @@ h3 {
 
 /* Consistent UI Components */
 .obsidian-card {
-    background: linear-gradient(165deg, #0a0a0a, #020202);
-    border: 1px solid var(--glass-border);
+    background: linear-gradient(165deg, #1a1a1a, #0d0d0d);
+    border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 1.5rem;
     padding: 1.25rem;
     transition: all 0.3s var(--transition-standard);
 }
 
 .obsidian-card:active {
-    background: linear-gradient(165deg, #050505, #000000);
+    background: linear-gradient(165deg, #0d0d0d, #050505);
 }
 
 /* Interactive Elements */
@@ -185,7 +185,7 @@ h3 {
 /* Premium Inputs */
 .premium-input {
     background: var(--surface-dark);
-    border: 1px solid var(--glass-border);
+    border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 1rem;
     padding: 1rem 1.25rem;
     color: white;
@@ -242,11 +242,30 @@ h3 {
 }
 
 .text-zinc-dim {
-    color: #888;
+    color: #a1a1aa;
+    /* zinc-400 */
 }
 
 .text-zinc-bright {
-    color: #ccc;
+    color: #f4f4f5;
+    /* zinc-100 */
+}
+
+/* Global text defaults for better visibility */
+.app-container p,
+.app-container span:not(.material-symbols-rounded),
+.app-container div {
+    color: rgba(255, 255, 255, 0.95);
+}
+
+/* Ensure all text elements are white by default */
+.app-container h1,
+.app-container h2,
+.app-container h3,
+.app-container h4,
+.app-container h5,
+.app-container h6 {
+    color: #ffffff !important;
 }
 
 /* Custom Scrollbar Hiding */
