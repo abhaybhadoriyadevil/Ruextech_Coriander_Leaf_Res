@@ -114,17 +114,115 @@
                         <button onclick="fakeAction('Apply Free Delivery')"
                             class="text-primary text-[10px] font-bold underline px-2">APPLY</button>
                     </div>
-                    <div class="obsidian-card p-5 flex items-center gap-5 tap-effect group">
-                        <div
-                            class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
-                            <span class="material-symbols-rounded text-3xl">redeem</span>
+                </div>
+            </section>
+
+            <!-- Bank Offers -->
+            <section class="animate-slide-up" style="animation-delay: 0.25s">
+                <h2 class="text-sm font-bold text-zinc-400 uppercase tracking-widest mb-4 px-2">Bank Offers</h2>
+                <div class="grid grid-cols-2 gap-3 px-2">
+                    <div class="obsidian-card p-4 tap-effect border-l-4 border-l-[#004c8f]">
+                        <h4 class="font-bold text-xs mb-1">HDFC Bank</h4>
+                        <p class="text-[10px] text-zinc-400 mb-2">15% Discount using Credit Cards</p>
+                        <span
+                            class="text-[9px] font-mono bg-white/10 px-1.5 py-0.5 rounded text-zinc-300">HDFCXY15</span>
+                    </div>
+                    <div class="obsidian-card p-4 tap-effect border-l-4 border-l-[#e85a4f]">
+                        <h4 class="font-bold text-xs mb-1">ICICI Bank</h4>
+                        <p class="text-[10px] text-zinc-400 mb-2">Flat ₹100 Off on orders > ₹800</p>
+                        <span
+                            class="text-[9px] font-mono bg-white/10 px-1.5 py-0.5 rounded text-zinc-300">ICICI100</span>
+                    </div>
+                    <div class="obsidian-card p-4 tap-effect border-l-4 border-l-[#002e6e]">
+                        <h4 class="font-bold text-xs mb-1">Paytm UPI</h4>
+                        <p class="text-[10px] text-zinc-400 mb-2">Cashback up to ₹50 on UPI</p>
+                        <span
+                            class="text-[9px] font-mono bg-white/10 px-1.5 py-0.5 rounded text-zinc-300">PAYTM50</span>
+                    </div>
+                    <div class="obsidian-card p-4 tap-effect border-l-4 border-l-[#5f259f]">
+                        <h4 class="font-bold text-xs mb-1">Simpl</h4>
+                        <p class="text-[10px] text-zinc-400 mb-2">Get 5% Cashback on 1st Order</p>
+                        <span
+                            class="text-[9px] font-mono bg-white/10 px-1.5 py-0.5 rounded text-zinc-300">SIMPLNEW</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Membership Plan -->
+            <section class="animate-slide-up px-1" style="animation-delay: 0.3s">
+                <div
+                    class="w-full rounded-3xl bg-gradient-to-br from-[#FFD700]/20 to-[#B8860B]/10 p-6 border border-[#FFD700]/30 relative overflow-hidden">
+                    <div class="absolute -right-6 -top-6 w-32 h-32 bg-[#FFD700]/10 rounded-full blur-2xl"></div>
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h3 class="text-xl font-accent italic text-[#FFD700] mb-1">Coriander Gold</h3>
+                            <p class="text-[10px] text-zinc-400">Premium Membership Plan</p>
+                        </div>
+                        <span class="material-symbols-rounded text-[#FFD700] text-3xl">workspace_premium</span>
+                    </div>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center gap-2 text-xs text-zinc-300">
+                            <span class="material-symbols-rounded text-primary text-sm">check_circle</span> Unlimited
+                            Free Delivery
+                        </li>
+                        <li class="flex items-center gap-2 text-xs text-zinc-300">
+                            <span class="material-symbols-rounded text-primary text-sm">check_circle</span> Extra 5% Off
+                            giving on every order
+                        </li>
+                        <li class="flex items-center gap-2 text-xs text-zinc-300">
+                            <span class="material-symbols-rounded text-primary text-sm">check_circle</span> Priority
+                            Customer Support
+                        </li>
+                    </ul>
+                    <button
+                        class="w-full bg-[#FFD700] text-black font-bold py-3 rounded-xl uppercase tracking-widest text-xs tap-effect">Join
+                        Now @ ₹99/month</button>
+                </div>
+            </section>
+
+            <!-- Deal of the Day -->
+            <section class="animate-slide-up" style="animation-delay: 0.35s">
+                <div class="flex items-center justify-between mb-4 px-2">
+                    <h2 class="text-sm font-bold text-zinc-400 uppercase tracking-widest">Deal of the Day</h2>
+                    <div class="flex items-center gap-1 bg-red-500/20 px-2 py-1 rounded text-red-400">
+                        <span class="material-symbols-rounded text-[10px]">timer</span>
+                        <span class="text-[10px] font-bold">Ends in 04:22:15</span>
+                    </div>
+                </div>
+                <div class="flex overflow-x-auto gap-4 hide-scrollbar px-2 pb-4">
+                    <div
+                        class="min-w-[220px] obsidian-card p-3 flex gap-3 items-center tap-effect border border-red-500/20">
+                        <div class="w-16 h-16 rounded-xl overflow-hidden shrink-0">
+                            <img src="images/paneer-tikka.png" class="w-full h-full object-cover">
                         </div>
                         <div class="flex-1">
-                            <h3 class="font-bold text-sm">Free Dessert</h3>
-                            <p class="text-[10px] text-zinc-400">With any Main Course</p>
+                            <h4 class="font-bold text-sm mb-0.5 line-clamp-1">Spicy Paneer Wrap</h4>
+                            <div class="flex items-center gap-2">
+                                <span class="text-white font-bold">₹149</span>
+                                <span class="text-zinc-500 text-xs line-through">₹199</span>
+                            </div>
                         </div>
-                        <button onclick="fakeAction('Apply Free Dessert')"
-                            class="text-primary text-[10px] font-bold underline px-2">APPLY</button>
+                        <button
+                            class="w-8 h-8 rounded-full bg-primary text-black flex items-center justify-center shrink-0">
+                            <span class="material-symbols-rounded text-sm">add</span>
+                        </button>
+                    </div>
+                    <div
+                        class="min-w-[220px] obsidian-card p-3 flex gap-3 items-center tap-effect border border-red-500/20">
+                        <div class="w-16 h-16 rounded-xl overflow-hidden shrink-0">
+                            <img src="images/logo.png" class="w-full h-full object-cover">
+                        </div>
+                        <div class="flex-1">
+                            <h4 class="font-bold text-sm mb-0.5 line-clamp-1">Oreo Shake</h4>
+                            <div class="flex items-center gap-2">
+                                <span class="text-white font-bold">₹99</span>
+                                <span class="text-zinc-500 text-xs line-through">₹149</span>
+                            </div>
+                        </div>
+                        <button
+                            class="w-8 h-8 rounded-full bg-primary text-black flex items-center justify-center shrink-0">
+                            <span class="material-symbols-rounded text-sm">add</span>
+                        </button>
                     </div>
                 </div>
             </section>
