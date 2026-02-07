@@ -88,27 +88,72 @@
                 </button>
             </section>
 
+            <!-- What's on your mind? (Categories) -->
+            <section class="animate-slide-up" style="animation-delay: 0.15s">
+                <h3 class="text-lg font-bold mb-4 px-2">What's on your mind?</h3>
+                <div class="flex overflow-x-auto gap-4 hide-scrollbar pb-2 px-2 text-center">
+                    <div class="flex flex-col items-center gap-2 min-w-[80px] tap-effect"
+                        onclick="navigate('menu.html')">
+                        <div class="w-16 h-16 rounded-full overflow-hidden border-2 border-primary p-0.5">
+                            <img src="images/paneer-tikka.png" class="w-full h-full object-cover rounded-full">
+                        </div>
+                        <span class="text-xs font-medium">Starters</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-2 min-w-[80px] tap-effect"
+                        onclick="navigate('menu.html')">
+                        <div class="w-16 h-16 rounded-full overflow-hidden border-2 border-primary/30 p-0.5">
+                            <img src="images/main-course-premium.png" class="w-full h-full object-cover rounded-full">
+                        </div>
+                        <span class="text-xs font-medium">Main Course</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-2 min-w-[80px] tap-effect"
+                        onclick="navigate('menu.html')">
+                        <div class="w-16 h-16 rounded-full overflow-hidden border-2 border-primary/30 p-0.5">
+                            <img src="images/logo.png" class="w-full h-full object-cover rounded-full">
+                        </div>
+                        <span class="text-xs font-medium">Biryani</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-2 min-w-[80px] tap-effect"
+                        onclick="navigate('menu.html')">
+                        <div class="w-16 h-16 rounded-full overflow-hidden border-2 border-primary/30 p-0.5">
+                            <img src="images/logo.png" class="w-full h-full object-cover rounded-full">
+                        </div>
+                        <span class="text-xs font-medium">Desserts</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-2 min-w-[80px] tap-effect"
+                        onclick="navigate('menu.html')">
+                        <div class="w-16 h-16 rounded-full overflow-hidden border-2 border-primary/30 p-0.5">
+                            <img src="images/logo.png" class="w-full h-full object-cover rounded-full">
+                        </div>
+                        <span class="text-xs font-medium">Drinks</span>
+                    </div>
+                </div>
+            </section>
+
             <!-- Trending Dishes -->
             <section class="animate-slide-up" style="animation-delay: 0.2s">
                 <div class="flex items-center justify-between mb-4 px-2">
                     <h3 class="text-lg font-bold">Trending Today</h3>
                     <button onclick="navigate('menu.html')"
-                        class="bg-primary text-black px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest tap-effect">VIEW
-                        ALL</button>
+                        class="text-primary text-xs font-bold uppercase tracking-widest tap-effect">View All</button>
                 </div>
-                <div class="flex overflow-x-auto gap-4 hide-scrollbar pb-4 ">
+                <div class="flex overflow-x-auto gap-4 hide-scrollbar pb-4 px-2">
                     <!-- Paneer Tikka -->
                     <div class="min-w-[200px] obsidian-card p-4 group tap-effect cursor-pointer"
                         onclick="navigate('menu.html')">
                         <div class="w-full h-32 rounded-2xl overflow-hidden mb-3 relative">
                             <img src="images/paneer-tikka.png"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-duration-500">
+                            <div class="absolute top-2 right-2 bg-black/60 backdrop-blur-md px-2 py-1 rounded-lg">
+                                <span class="text-white text-[10px] font-bold">4.8 ⭐</span>
+                            </div>
                         </div>
-                        <h4 class="font-bold text-sm mb-1">Paneer Tikka Achari</h4>
+                        <h4 class="font-bold text-sm mb-1 truncate">Paneer Tikka Achari</h4>
                         <div class="flex justify-between items-center">
                             <span class="text-primary font-bold">₹320</span>
-                            <span
-                                class="bg-primary/20 px-2 py-0.5 rounded-full text-[10px] text-primary font-bold">BESTSELLER</span>
+                            <button class="w-6 h-6 rounded-full bg-primary text-black flex items-center justify-center">
+                                <span class="material-symbols-rounded text-sm">add</span>
+                            </button>
                         </div>
                     </div>
                     <!-- Dal Makhani -->
@@ -117,13 +162,144 @@
                         <div class="w-full h-32 rounded-2xl overflow-hidden mb-3 relative">
                             <img src="images/main-course-premium.png"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-duration-500">
+                            <div class="absolute top-2 right-2 bg-black/60 backdrop-blur-md px-2 py-1 rounded-lg">
+                                <span class="text-white text-[10px] font-bold">4.9 ⭐</span>
+                            </div>
                         </div>
-                        <h4 class="font-bold text-sm mb-1">Classic Dal Makhani</h4>
+                        <h4 class="font-bold text-sm mb-1 truncate">Classic Dal Makhani</h4>
                         <div class="flex justify-between items-center">
                             <span class="text-primary font-bold">₹280</span>
-                            <span
-                                class="bg-primary/20 px-2 py-0.5 rounded-full text-[10px] text-primary font-bold">FAVORITE</span>
+                            <button class="w-6 h-6 rounded-full bg-primary text-black flex items-center justify-center">
+                                <span class="material-symbols-rounded text-sm">add</span>
+                            </button>
                         </div>
+                    </div>
+                    <!-- Biryani -->
+                    <div class="min-w-[200px] obsidian-card p-4 group tap-effect cursor-pointer"
+                        onclick="navigate('menu.html')">
+                        <div class="w-full h-32 rounded-2xl overflow-hidden mb-3 relative">
+                            <img src="images/hero-main.png"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-duration-500">
+                            <div class="absolute top-2 right-2 bg-black/60 backdrop-blur-md px-2 py-1 rounded-lg">
+                                <span class="text-white text-[10px] font-bold">4.7 ⭐</span>
+                            </div>
+                        </div>
+                        <h4 class="font-bold text-sm mb-1 truncate">Hyderabadi Veg Biryani</h4>
+                        <div class="flex justify-between items-center">
+                            <span class="text-primary font-bold">₹350</span>
+                            <button class="w-6 h-6 rounded-full bg-primary text-black flex items-center justify-center">
+                                <span class="material-symbols-rounded text-sm">add</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Special Offer Banner -->
+            <section class="animate-slide-up px-1" style="animation-delay: 0.25s">
+                <div
+                    class="w-full rounded-3xl bg-gradient-to-r from-[#1DB954] to-[#168F43] p-6 relative overflow-hidden tap-effect shadow-lg shadow-primary/20">
+                    <div class="absolute -right-10 -top-10 w-40 h-40 bg-white/10 rounded-full blur-2xl"></div>
+                    <div class="relative z-10">
+                        <span
+                            class="bg-black/20 text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider mb-2 inline-block">Limited
+                            Time</span>
+                        <h3 class="text-2xl font-black italic text-white leading-tight mb-2">FREE<br>DESSERT</h3>
+                        <p class="text-white/90 text-xs font-medium mb-4">On all orders above ₹500</p>
+                        <button onclick="navigate('menu.html')"
+                            class="bg-white text-primary px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wide">Claim
+                            Now</button>
+                    </div>
+                    <img src="images/logo.png"
+                        class="absolute -bottom-8 -right-4 w-32 h-32 object-cover opacity-80 rotate-12">
+                </div>
+            </section>
+
+            <!-- Recommended For You -->
+            <section class="animate-slide-up" style="animation-delay: 0.3s">
+                <h3 class="text-lg font-bold mb-4 px-2">Chef's Specials</h3>
+                <div class="flex overflow-x-auto gap-4 hide-scrollbar pb-4 px-2">
+                    <div class="min-w-[260px] obsidian-card p-3 flex gap-3 items-center tap-effect"
+                        onclick="navigate('menu.html')">
+                        <div class="w-20 h-20 rounded-xl overflow-hidden shrink-0">
+                            <img src="images/paneer-tikka.png" class="w-full h-full object-cover">
+                        </div>
+                        <div class="flex-1">
+                            <h4 class="font-bold text-sm mb-1">Malai Kofta</h4>
+                            <p class="text-[10px] text-zinc-300 line-clamp-1 mb-2">Rich cashew gravy dumplings</p>
+                            <span class="text-primary font-bold">₹340</span>
+                        </div>
+                        <button
+                            class="w-8 h-8 rounded-full bg-primary/20 text-primary flex items-center justify-center shrink-0">
+                            <span class="material-symbols-rounded text-sm">add</span>
+                        </button>
+                    </div>
+                    <div class="min-w-[260px] obsidian-card p-3 flex gap-3 items-center tap-effect"
+                        onclick="navigate('menu.html')">
+                        <div class="w-20 h-20 rounded-xl overflow-hidden shrink-0">
+                            <img src="images/main-course-premium.png" class="w-full h-full object-cover">
+                        </div>
+                        <div class="flex-1">
+                            <h4 class="font-bold text-sm mb-1">Butter Naan Combo</h4>
+                            <p class="text-[10px] text-zinc-300 line-clamp-1 mb-2">2 Naan + Paneer Butter Masala</p>
+                            <span class="text-primary font-bold">₹420</span>
+                        </div>
+                        <button
+                            class="w-8 h-8 rounded-full bg-primary/20 text-primary flex items-center justify-center shrink-0">
+                            <span class="material-symbols-rounded text-sm">add</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Customer Reviews -->
+            <section class="animate-slide-up pb-6" style="animation-delay: 0.35s">
+                <div class="flex items-center justify-between mb-4 px-2">
+                    <h3 class="text-lg font-bold">Happy Customers</h3>
+                    <div class="flex items-center gap-1">
+                        <span class="text-yellow-400 material-symbols-rounded text-sm">star</span>
+                        <span class="text-xs font-bold">4.8 (2k+)</span>
+                    </div>
+                </div>
+                <div class="flex overflow-x-auto gap-4 hide-scrollbar px-2">
+                    <div class="min-w-[240px] obsidian-card p-4">
+                        <div class="flex items-center gap-2 mb-3">
+                            <div
+                                class="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-xs">
+                                RK</div>
+                            <div>
+                                <p class="text-xs font-bold">Rajesh Kumar</p>
+                                <div class="flex text-yellow-400 text-[10px]">★★★★★</div>
+                            </div>
+                        </div>
+                        <p class="text-[11px] text-zinc-300 italic">"The Paneer Tikka was absolutely melting in the
+                            mouth! Best delivery packaging I've seen."</p>
+                    </div>
+                    <div class="min-w-[240px] obsidian-card p-4">
+                        <div class="flex items-center gap-2 mb-3">
+                            <div
+                                class="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-xs">
+                                AS</div>
+                            <div>
+                                <p class="text-xs font-bold">Anjali Sharma</p>
+                                <div class="flex text-yellow-400 text-[10px]">★★★★★</div>
+                            </div>
+                        </div>
+                        <p class="text-[11px] text-zinc-300 italic">"Loved the quick delivery and the Dal Makhani is
+                            just authentic. Highly recommended!"</p>
+                    </div>
+                    <div class="min-w-[240px] obsidian-card p-4">
+                        <div class="flex items-center gap-2 mb-3">
+                            <div
+                                class="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-xs">
+                                VP</div>
+                            <div>
+                                <p class="text-xs font-bold">Vikram Patel</p>
+                                <div class="flex text-yellow-400 text-[10px]">★★★★☆</div>
+                            </div>
+                        </div>
+                        <p class="text-[11px] text-zinc-300 italic">"Great food quality. The biryani portion size was
+                            generous."</p>
                     </div>
                 </div>
             </section>
