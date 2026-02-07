@@ -2,16 +2,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
-    --primary: #10B981;
-    /* Premium Emerald/Green */
-    --primary-dark: #059669;
-    --primary-muted: rgba(16, 185, 129, 0.15);
-    --obsidian-bg: #000000;
-    --surface-dark: #0a0a0a;
-    --surface-light: #1a1a1a;
-    --glass-bg: rgba(0, 0, 0, 0.85);
-    --glass-border: rgba(255, 255, 255, 0.08);
+    /* Core Brand Colors */
+    --primary: #1DB954;
+    /* Primary Green - CTAs, active states */
+    --primary-dark: #168F43;
+    /* Dark Green - hover states */
+    --primary-light: #E8F7EF;
+    /* Light Green - accent backgrounds */
+    --primary-muted: rgba(29, 185, 84, 0.15);
+
+    /* Base Colors */
+    --obsidian-bg: #0F0F0F;
+    /* Primary Black - easier on eyes than pure black */
+    --surface-dark: #0F0F0F;
+    --surface-light: #FFFFFF;
+    /* White for cards and content */
+    --card-bg: #FFFFFF;
+
+    /* Text Colors */
+    --text-primary: #FFFFFF;
+    --text-secondary: #A1A1A1;
+    /* Dark Gray for descriptions */
+    --text-on-primary: #FFFFFF;
+    /* White text on green buttons */
+
+    /* Borders & Dividers */
+    --border-dark: #2A2A2A;
+    /* Medium Gray for borders on dark bg */
+    --border-light: #E8F7EF;
+    /* Light green for borders on white */
+
+    /* Glass Effects */
+    --glass-bg: rgba(15, 15, 15, 0.9);
+    --glass-border: rgba(255, 255, 255, 0.1);
+
+    /* Transitions */
     --transition-standard: cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Fonts */
     --font-heading: 'Outfit', sans-serif;
     --font-body: 'Inter', sans-serif;
 }
@@ -126,15 +154,17 @@ h3 {
 
 /* Consistent UI Components */
 .obsidian-card {
-    background: linear-gradient(165deg, #1a1a1a, #0d0d0d);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: var(--card-bg);
+    border: 1px solid var(--border-light);
     border-radius: 1.5rem;
     padding: 1.25rem;
     transition: all 0.3s var(--transition-standard);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .obsidian-card:active {
-    background: linear-gradient(165deg, #0d0d0d, #050505);
+    transform: translateY(1px);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Interactive Elements */
@@ -145,7 +175,7 @@ h3 {
 
 .btn-primary {
     background-color: var(--primary);
-    color: #000 !important;
+    color: var(--text-on-primary) !important;
     font-weight: 800;
     font-size: 0.875rem;
     text-transform: uppercase;
@@ -156,12 +186,18 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 20px rgba(16, 185, 129, 0.25);
+    box-shadow: 0 4px 20px rgba(29, 185, 84, 0.3);
     border: none;
 }
 
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    box-shadow: 0 6px 24px rgba(29, 185, 84, 0.4);
+}
+
 .btn-primary:active {
-    box-shadow: 0 2px 8px rgba(16, 185, 129, 0.15);
+    transform: translateY(1px);
+    box-shadow: 0 2px 12px rgba(29, 185, 84, 0.2);
 }
 
 .btn-muted {
@@ -169,7 +205,7 @@ h3 {
     color: var(--primary) !important;
     font-weight: 700;
     font-size: 0.875rem;
-    border: 1px solid rgba(16, 185, 129, 0.2);
+    border: 1px solid rgba(29, 185, 84, 0.3);
     padding: 1rem 1.5rem;
     border-radius: 1rem;
     transition: all 0.3s var(--transition-standard);
@@ -178,17 +214,22 @@ h3 {
     justify-content: center;
 }
 
+.btn-muted:hover {
+    background-color: rgba(29, 185, 84, 0.25);
+    border-color: var(--primary);
+}
+
 .btn-muted:active {
-    background-color: rgba(16, 185, 129, 0.25);
+    background-color: rgba(29, 185, 84, 0.3);
 }
 
 /* Premium Inputs */
 .premium-input {
-    background: var(--surface-dark);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: var(--surface-light);
+    border: 1px solid var(--border-dark);
     border-radius: 1rem;
     padding: 1rem 1.25rem;
-    color: white;
+    color: var(--obsidian-bg);
     font-family: var(--font-body);
     width: 100%;
     transition: all 0.3s var(--transition-standard);
@@ -198,7 +239,11 @@ h3 {
     outline: none;
     border-color: var(--primary);
     background: var(--surface-light);
-    box-shadow: 0 0 10px rgba(34, 197, 94, 0.1);
+    box-shadow: 0 0 0 3px rgba(29, 185, 84, 0.1);
+}
+
+.premium-input::placeholder {
+    color: var(--text-secondary);
 }
 
 /* Animations */
@@ -242,30 +287,36 @@ h3 {
 }
 
 .text-zinc-dim {
-    color: #a1a1aa;
-    /* zinc-400 */
+    color: var(--text-secondary);
+    /* #A1A1A1 */
 }
 
 .text-zinc-bright {
-    color: #f4f4f5;
-    /* zinc-100 */
+    color: var(--text-primary);
+    /* #FFFFFF */
 }
 
-/* Global text defaults for better visibility */
-.app-container p,
-.app-container span:not(.material-symbols-rounded),
-.app-container div {
-    color: rgba(255, 255, 255, 0.95);
+/* Global text defaults - Cards have dark text on white bg */
+.obsidian-card h1,
+.obsidian-card h2,
+.obsidian-card h3,
+.obsidian-card h4,
+.obsidian-card h5,
+.obsidian-card h6 {
+    color: var(--obsidian-bg) !important;
 }
 
-/* Ensure all text elements are white by default */
-.app-container h1,
-.app-container h2,
-.app-container h3,
-.app-container h4,
-.app-container h5,
-.app-container h6 {
-    color: #ffffff !important;
+.obsidian-card p,
+.obsidian-card span:not(.material-symbols-rounded),
+.obsidian-card div {
+    color: var(--obsidian-bg);
+}
+
+/* Dark sections keep white text */
+.glass-nav,
+.bottom-nav,
+.app-container>header {
+    color: var(--text-primary);
 }
 
 /* Custom Scrollbar Hiding */
